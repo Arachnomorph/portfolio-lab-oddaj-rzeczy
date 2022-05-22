@@ -5,22 +5,36 @@ import {Link as ScrollLink} from 'react-scroll'
 const HomeHeader = () => {
 
     return (
-        <div className={'headerContainer'}>
-            <RouterLink to='/LogIn'>Zaloguj</RouterLink>
-            <RouterLink to='/Register'>Załóż konto</RouterLink>
+        <>
             <nav>
-                <RouterLink to='/'>Start</RouterLink>
-                <ScrollLink activeClass='active' to='HomeSteps'>O co chodzi?</ScrollLink>
-                <ScrollLink activeClass='active' to='HomeAboutUs'>O nas</ScrollLink>
-                <ScrollLink activeClass='active' to='HomeOrgs'>Fundacja i Organizacje</ScrollLink>
-                <ScrollLink activeClass='active' to='HomeContact'>Kontakt</ScrollLink>
+                <div className='signIn'>
+                    <RouterLink to='/LogIn'>Zaloguj</RouterLink>
+                    <RouterLink to='/Register'>Załóż konto</RouterLink>
+                </div>
+                <div className='scrollNav'>
+                    <RouterLink to='/'>Start</RouterLink>
+                    <ScrollLink activeClass='active' to='HomeSteps'>O co chodzi?</ScrollLink>
+                    <ScrollLink activeClass='active' to='HomeAboutUs'>O nas</ScrollLink>
+                    <ScrollLink activeClass='active' to='HomeOrgs'>Fundacja i Organizacje</ScrollLink>
+                    <ScrollLink activeClass='active' to='HomeContact'>Kontakt</ScrollLink>
+                </div>
             </nav>
-            <div>
-                <RouterLink to='/LogIn'>Oddaj Rzeczy</RouterLink>
-                <RouterLink to='/LogIn'>Zorganizuj Zbiórkę</RouterLink>
+            <div className='headerContainer'>
+                <div className='bg'></div>
+                <div className='cta'>
+                    <span>
+                        Zacznij pomagać!
+                    </span>
+                    <span>Oddaj niechciane rzeczy w zaufane ręce</span>
+                    <div className='decor'></div>
+                    <div className='actions'>
+                        <RouterLink className='bigButton' to='/LogIn'>Oddaj Rzeczy</RouterLink>
+                        <RouterLink className='bigButton' to='/LogIn'>Zorganizuj Zbiórkę</RouterLink>
+                    </div>
+                </div>
             </div>
-        </div>
-)
+        </>
+    )
 }
 
 export default HomeHeader;

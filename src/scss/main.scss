@@ -1,6 +1,7 @@
 @import "node_modules/reset-css/sass/reset";
 @import "settings/fonts";
 @import "settings/colors";
+@import 'partials/header';
 
 * {
   box-sizing: border-box;
@@ -8,9 +9,11 @@
 
 body {
   font-family: $font-base;
+  font-size: 1.5vw;
 }
-div {
-  height: 300px;
-  border: 2px solid red;
-}
+
+//div {
+//  height: 300px;
+//  border: 2px solid red;
+//}
 
