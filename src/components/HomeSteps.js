@@ -1,9 +1,12 @@
 import React from "react";
+import {Element} from "react-scroll";
 
 const HomeSteps = () => {
 
     return (
-        <div className={'stepsContainer'}>Steps</div>
+        <Element id='HomeSteps'>
+            <div className={'stepsContainer'}>Steps</div>
+        </Element>
     )
 }
 
