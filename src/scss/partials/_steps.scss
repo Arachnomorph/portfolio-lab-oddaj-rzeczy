@@ -1,0 +1,27 @@
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 2em 0 2em 0;
+}
+
+.stepsColumns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepsColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  padding: 2em;
+  text-align: center;
+  background-color: $color-background-contrast;
+}
