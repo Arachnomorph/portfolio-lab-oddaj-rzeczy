@@ -2,6 +2,7 @@
 @import "settings/fonts";
 @import "settings/colors";
 @import 'partials/header';
+@import 'partials/stats';
 
 * {
   box-sizing: border-box;
@@ -9,7 +10,7 @@
 
 body {
   font-family: $font-base;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 //div {

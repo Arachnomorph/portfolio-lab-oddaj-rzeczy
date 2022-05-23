@@ -29,7 +29,7 @@ const HomeHeader = () => {
                     <div className='decor'></div>
                     <div className='actions'>
                         <RouterLink className='bigButton' to='/LogIn'>Oddaj Rzeczy</RouterLink>
-                        <RouterLink className='bigButton' to='/LogIn'>Zorganizuj Zbiórkę</RouterLink>
+                        <RouterLink className='bigButton' to='/LogIn'>Zorganizuj {'\n'} Zbiórkę</RouterLink>
                     </div>
                 </div>
             </div>

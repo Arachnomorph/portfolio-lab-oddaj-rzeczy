@@ -1,0 +1,34 @@
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../assets/3 Columns Background.png");
+  background-size: contain;
+}
+
+.statsColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  color: $color-text-secondary;
+  padding: 80px;
+}
+
+.statNumber {
+  font-weight: 300;
+  font-size: 5em;
+}
+
+.statSubTitle {
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.statDesc {
+  text-align: center;
+  font-size: 0.8em;
+}
