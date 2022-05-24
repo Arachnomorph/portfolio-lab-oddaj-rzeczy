@@ -4,6 +4,12 @@ import {Link as ScrollLink} from 'react-scroll'
 
 const HomeHeader = () => {
 
+    const options = {
+        activeClass: 'active',
+        smooth: true,
+        duration: 500
+    }
+
     return (
         <>
             <nav>
@@ -12,14 +18,14 @@ const HomeHeader = () => {
                     <RouterLink to='/Register'>Załóż konto</RouterLink>
                 </div>
                 <div className='scrollNav'>
-                    <RouterLink to='/'>Start</RouterLink>
+                    <ScrollLink activeClass='active' to='HomeStart'><RouterLink to='/'>Start</RouterLink></ScrollLink>
                     <ScrollLink activeClass='active' to='HomeSteps'>O co chodzi?</ScrollLink>
                     <ScrollLink activeClass='active' to='HomeAboutUs'>O nas</ScrollLink>
                     <ScrollLink activeClass='active' to='HomeOrgs'>Fundacja i Organizacje</ScrollLink>
-                    <ScrollLink activeClass='active' to='HomeContact'>Kontakt</ScrollLink>
+                    <ScrollLink to='HomeContact' {...options}>Kontakt</ScrollLink>
                 </div>
             </nav>
-            <div className='headerContainer'>
+            <div id='HomeStart' className='headerContainer'>
                 <div className='bg'></div>
                 <div className='cta'>
                     <span>

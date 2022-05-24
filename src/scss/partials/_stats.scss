@@ -1,7 +1,7 @@
 .statsContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
 
   background-image: url("../../assets/3 Columns Background.png");
   background-size: contain;
@@ -10,7 +10,7 @@
 .statsColumn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   gap: 1em;
 
@@ -25,6 +25,7 @@
 
 .statSubTitle {
   text-transform: uppercase;
+  text-align: center;
   font-size: 0.9em;
 }
 

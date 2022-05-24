@@ -1,0 +1,24 @@
+.aboutUsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-background-contrast;
+    text-align: center;
+    padding: 130px;
+}
+
+.bg2 {
+    background-image: url("../../../src/assets/People.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 50%;
+}
