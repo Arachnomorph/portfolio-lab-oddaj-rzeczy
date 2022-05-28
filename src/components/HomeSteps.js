@@ -8,7 +8,7 @@ const HomeSteps = () => {
         <Element id='HomeSteps'>
             <div className={'stepsContainer'}>
                 <h2>Wystarczą cztery proste kroki</h2>
-                <div className='decor'></div>
+                <div className='decor'/>
                 <div className='stepsColumns'>
                     <div className='stepsColumn'>
                         <span>Wybierz rzeczy</span>

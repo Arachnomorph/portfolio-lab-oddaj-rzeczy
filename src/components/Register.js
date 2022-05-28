@@ -1,10 +1,12 @@
 import React from "react";
 import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 
 const Register = () => {
 
     const {register, handleSubmit} = useForm();
+    const navigate = useNavigate();
 
     const newUser = (data) => {
         const auth = getAuth();
@@ -16,6 +18,9 @@ const Register = () => {
                 const user = userCredential.user;
                 console.log(user)
             })
+            .then (() => {if (data) {
+                navigate('/');
+        }})
             .catch(error => {
                 const errorCode = error.code;
                 console.log(errorCode)

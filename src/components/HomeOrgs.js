@@ -8,7 +8,7 @@ const HomeOrgs = () => {
         <Element id='HomeOrgs'>
             <div className={'orgsContainer'}>
                 <h2>Komu pomagamy?</h2>
-                <div className='decor'></div>
+                <div className='decor'/>
                 <div className='carousel'>
                     <div className='carouselSelect'>
                         <button>Fundacjom</button>
