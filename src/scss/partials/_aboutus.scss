@@ -1,24 +1,35 @@
 .aboutUsContainer {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 
-    background-color: $color-background-contrast;
-    text-align: center;
-    padding: 130px;
+  background-color: $color-background-contrast;
+  text-align: center;
+  padding: 7vw;
+}
+
+.signature {
+  align-self: flex-end;
+  background-image: url("../../../src/assets/Signature.svg");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
 }
 
 .bg2 {
-    background-image: url("../../../src/assets/People.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-width: 50%;
+  background-image: url("../../../src/assets/People.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 50%;
 }

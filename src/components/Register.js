@@ -1,11 +1,22 @@
 import React from "react";
 import {getAuth, createUserWithEmailAndPassword} from 'firebase/auth';
 import {useForm} from "react-hook-form";
+import {yupResolver} from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import {useNavigate} from "react-router-dom";
 
 const Register = () => {
+    const schema = yup.object({
+        email: yup.string().email().required(),
+        password: yup.string().required()
+    }).required();
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm({
+        resolver: yupResolver(schema)
+    });
+
+    console.log(errors);
+
     const navigate = useNavigate();
 
     const newUser = (data) => {
@@ -16,22 +27,26 @@ const Register = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(userCredential => {
                 const user = userCredential.user;
-                console.log(user)
             })
-            .then (() => {if (data) {
-                navigate('/');
-        }})
+            .then(() => {
+                if (data) {
+                    navigate('/');
+                }
+            })
             .catch(error => {
                 const errorCode = error.code;
-                console.log(errorCode)
                 const errorMessage = error.message;
-                console.log(errorMessage)
+                if (errorMessage === '')
+                    alert(errorMessage)
             })
     }
 
     return (
-        <form onSubmit={handleSubmit(newUser)} className={'register'}>
-            <input type='email' {...register('email', {required: true})}/>
+        <form noValidate onSubmit={handleSubmit(newUser)} className={'register'}>
+            <div>
+                <input type='email' {...register('email', {required: true})}/>
+                <p>{errors?.email?.message}</p>
+            </div>
             <input type='password' {...register('password', {required: true})}/>
             <button type='submit'>Submit</button>
         </form>

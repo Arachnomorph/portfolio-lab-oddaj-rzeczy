@@ -6,6 +6,7 @@
 @import 'partials/steps';
 @import 'partials/aboutus';
 @import 'partials/orgs';
+@import 'partials/contact';
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,11 @@
 body {
   font-family: $font-base;
   font-size: 18px;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.2em;
 }
 
 .decor {
@@ -31,19 +37,16 @@ body {
   align-items: center;
   flex-wrap: wrap;
 
-  max-width: 300px;
+  max-width: 6em;
   color: $color-text-primary;
+  font-size: 1.8em;
   font-weight: 300;
   text-decoration: none;
+  text-align: center;
   line-height: 1.2em;
   border: 1px solid $color-text-primary;
   margin: 10px;
   padding: 13px;
   flex-basis: 50%;
 }
-
-//div {
-//  height: 300px;
-//  border: 2px solid red;
-//}
 

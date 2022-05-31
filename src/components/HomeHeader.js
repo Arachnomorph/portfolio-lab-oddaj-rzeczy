@@ -10,14 +10,11 @@ const HomeHeader = () => {
             <div id='HomeStart' className='headerContainer'>
                 <div className='bg'/>
                 <div className='cta'>
-                    <span>
-                        Zacznij pomagać!
-                    </span>
-                    <span>Oddaj niechciane rzeczy w zaufane ręce</span>
+                    <h2>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce</h2>
                     <div className='decor'/>
                     <div className='actions'>
                         <RouterLink className='bigButton' to='/LogIn'>Oddaj Rzeczy</RouterLink>
-                        <RouterLink className='bigButton' to='/LogIn'>Zorganizuj {'\n'} Zbiórkę</RouterLink>
+                        <RouterLink className='bigButton' to='/LogIn'>Zorganizuj Zbiórkę</RouterLink>
                     </div>
                 </div>
             </div>

@@ -2,10 +2,18 @@ import React from "react";
 import {useNavigate} from 'react-router-dom';
 import {useForm} from "react-hook-form";
 import {signInWithEmailAndPassword, getAuth} from "firebase/auth";
+import * as yup from "yup";
+import {yupResolver} from "@hookform/resolvers/yup";
 
 const LogIn = () => {
+    const schema = yup.object({
+        email: yup.string().email().required(),
+        password: yup.string().required()
+    }).required();
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit} = useForm({
+        resolver: yupResolver(schema)
+    });
     const navigate = useNavigate();
 
     const newUser = (data) => {
@@ -22,12 +30,13 @@ const LogIn = () => {
                 if (data !== null) {
                     navigate('/')
                 }
+                console.log(data);
             })
             .catch(error => {
                 const errorCode = error.code;
                 console.log(errorCode)
                 const errorMessage = error.message;
-                console.log(errorMessage)
+                alert(errorMessage)
             })
     }
 
